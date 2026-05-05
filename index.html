@@ -1,160 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+<title>Dashboard Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
+body {
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(135deg,#1e90ff,#ff69b4);
+    color:white;
+}
 
-        body {
-            background: linear-gradient(135deg, #1e90ff, #ff69b4);
-            min-height: 100vh;
-            color: white;
-        }
+nav {
+    background: rgba(0,0,0,0.3);
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+}
 
-        /* NAVBAR */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 30px;
-            background: rgba(0,0,0,0.2);
-            backdrop-filter: blur(10px);
-        }
+nav a {
+    color:white;
+    margin:0 10px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-        .navbar h1 {
-            font-size: 22px;
-        }
+.container {
+    padding:20px;
+}
 
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
+.card {
+    background: rgba(255,255,255,0.2);
+    padding:20px;
+    margin:10px 0;
+    border-radius:15px;
+    cursor:pointer;
+}
 
-        .navbar a:hover {
-            text-decoration: underline;
-        }
+.card:hover {
+    background: rgba(255,255,255,0.35);
+}
+</style>
 
-        /* MAIN */
-        .container {
-            padding: 30px;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: rgba(255,255,255,0.15);
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            background: rgba(255,255,255,0.25);
-        }
-
-        /* SECTIONS */
-        .section {
-            margin-top: 40px;
-            background: rgba(0,0,0,0.2);
-            padding: 20px;
-            border-radius: 15px;
-        }
-
-        .section h2 {
-            margin-bottom: 15px;
-        }
-
-        .item {
-            background: rgba(255,255,255,0.2);
-            padding: 10px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-            background: rgba(0,0,0,0.2);
-        }
-    </style>
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <h1>My Dashboard</h1>
-        <div>
-            <a href="index.html">Home</a>
-            <a href="updates.html">Updates</a>
-            <a href="notifications.html">Notifications</a>
-        </div>
+<nav>
+    <div>My System</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="updates.html">Updates</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="https://calculator-two-navy-79.vercel.app/" target="_blank">Calculator</a>
     </div>
+</nav>
 
-    <!-- MAIN CONTENT -->
-    <div class="container">
+<div class="container">
 
-        <!-- CARDS -->
-        <div class="cards">
-            <div class="card" onclick="location.href='updates.html'">
-                <h3>Updates</h3>
-                <p>Check latest updates</p>
-            </div>
+<h2>Dashboard</h2>
 
-            <div class="card" onclick="location.href='notifications.html'">
-                <h3>Notifications</h3>
-                <p>View alerts</p>
-            </div>
+<div class="card" onclick="location.href='updates.html'">
+    📢 View Updates
+</div>
 
-            <div class="card">
-                <h3>Profile</h3>
-                <p>Your personal info</p>
-            </div>
+<div class="card" onclick="location.href='notifications.html'">
+    🔔 View Notifications
+</div>
 
-            <div class="card">
-                <h3>Settings</h3>
-                <p>Manage system</p>
-            </div>
-        </div>
+<div class="card" onclick="window.open('https://calculator-two-navy-79.vercel.app/')">
+    🧮 Open Calculator App
+</div>
 
-        <!-- UPDATES SECTION -->
-        <div class="section">
-            <h2>Recent Updates</h2>
-            <div class="item">System updated successfully</div>
-            <div class="item">New feature added</div>
-            <div class="item">Performance improved</div>
-        </div>
-
-        <!-- NOTIFICATIONS SECTION -->
-        <div class="section">
-            <h2>Notifications</h2>
-            <div class="item">You have 3 new messages</div>
-            <div class="item">Backup completed</div>
-            <div class="item">New login detected</div>
-        </div>
-
-    </div>
-
-    <footer>
-        <p>© 2026 My Dashboard | All Rights Reserved</p>
-    </footer>
+</div>
 
 </body>
 </html>
