@@ -1,0 +1,8 @@
+{
+  "latest_version": "1.1.0",
+  "maintenance_mode": false,
+  "force_update": false,
+  "update_title": "New Calculator Update Available",
+  "update_message": "We improved speed and fixed bugs.",
+  "download_url": "https://calculator-two-navy-79.vercel.app/"
+}
